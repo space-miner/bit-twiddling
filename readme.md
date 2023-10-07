@@ -1,4 +1,4 @@
-- [ ] Compute the sign of an integer
+- [x] Compute the sign of an integer
 - [x] Detect if two integers have opposite signs
 - [x] Compute the integer absolute value (abs) without branching
 - [x] Compute the minimum (min) or maximum (max) of two integers without branching
@@ -7,7 +7,7 @@
     - [ ] Sign extending from a constant bit-width
     - [ ] Sign extending from a variable bit-width
     - [ ] Sign extending from a variable bit-width in 3 operations
-- [ ] Conditionally set or clear bits without branching
+- [x] Conditionally set or clear bits without branching
 - [ ] Conditionally negate a value without branching
 - [ ] Merge bits from two values according to a mask
 - [ ] Counting bits set
