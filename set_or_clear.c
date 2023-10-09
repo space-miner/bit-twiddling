@@ -1,10 +1,9 @@
-#include <limits.h>
 #include <stdbool.h>
 
 bool nondet_bool();
-int nondet_int();
+unsigned int nondet_uint();
 
-int set_or_clear_ref(bool cond, int mask, int word) {
+int set_or_clear_ref(bool cond, unsigned int mask, unsigned int word) {
   if (cond) {
     word |= mask;
   } else {
@@ -20,8 +19,8 @@ int set_or_clear_bit(bool cond, int mask, int word) {
 
 int main() {
   bool cond = nondet_bool();
-  int mask = nondet_int();
-  int word = nondet_int();
+  int mask = nondet_uint();
+  int word = nondet_uint();
   int res_ref = set_or_clear_ref(cond, mask, word);
   int res_bit = set_or_clear_bit(cond, mask, word);
   __CPROVER_assert(res_ref == res_bit,
