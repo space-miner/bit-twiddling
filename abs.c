@@ -1,5 +1,7 @@
 #include <limits.h>
 
+int nondet_int();
+
 int abs_ref(int x) { return x < 0 ? -x : x; }
 
 int abs_bit(int x) {

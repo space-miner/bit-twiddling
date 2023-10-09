@@ -1,6 +1,9 @@
 #include <limits.h>
 #include <stdbool.h>
 
+bool nondet_bool();
+int nondet_int();
+
 int set_or_clear_ref(bool cond, int mask, int word) {
   if (cond) {
     word |= mask;
@@ -21,6 +24,7 @@ int main() {
   int word = nondet_int();
   int res_ref = set_or_clear_ref(cond, mask, word);
   int res_bit = set_or_clear_bit(cond, mask, word);
-  __CPROVER_assert(res_ref == res_bit, "Err: set_or_clear_bit did not return the "
-                                     "same value as set_or_clear_ref");
+  __CPROVER_assert(res_ref == res_bit,
+                   "Err: set_or_clear_bit did not return the "
+                   "same value as set_or_clear_ref");
 }

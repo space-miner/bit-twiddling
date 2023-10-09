@@ -1,6 +1,8 @@
 #include <limits.h>
 #include <stdbool.h>
 
+int nondet_int();
+
 bool sign_ref(int x) {
   if (x < 0) {
     return -1;
@@ -20,5 +22,5 @@ int main() {
   bool res_ref = sign_ref(x);
   bool res_bit = sign_bit(x);
   __CPROVER_assert(res_ref == res_bit,
-                 "Err: sign_bit did not return the same value as sign_ref");
+                   "Err: sign_bit did not return the same value as sign_ref");
 }

@@ -1,3 +1,5 @@
+int nondet_int();
+
 int min_ref(int x, int y) {
   if (x <= y) {
     return x;
@@ -30,7 +32,7 @@ int main() {
   int maximum_ref = max_ref(x, y);
   int maximum_bit = max_bit(x, y);
   __CPROVER_assert(minimum_ref == minimum_bit,
-                 "Err: min_bit did not return the same value as min_ref");
+                   "Err: min_bit did not return the same value as min_ref");
   __CPROVER_assert(maximum_ref == maximum_bit,
-                 "Err: max_bit did not return the same value as max_ref");
+                   "Err: max_bit did not return the same value as max_ref");
 }

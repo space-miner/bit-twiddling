@@ -1,5 +1,7 @@
 #include <stdbool.h>
 
+int nondet_int();
+
 bool diff_signs_ref(int x, int y) {
   if (x < 0 && y >= 0) {
     return true;
