@@ -29,8 +29,8 @@ int main() {
   int minimum_bit = min_bit(x, y);
   int maximum_ref = max_ref(x, y);
   int maximum_bit = max_bit(x, y);
-  CPROVER_assert(minimum_ref == minimum_bit,
+  __CPROVER_assert(minimum_ref == minimum_bit,
                  "Err: min_bit did not return the same value as min_ref");
-  CPROVER_assert(maximum_ref == maximum_bit,
+  __CPROVER_assert(maximum_ref == maximum_bit,
                  "Err: max_bit did not return the same value as max_ref");
 }

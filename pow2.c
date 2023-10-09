@@ -23,6 +23,6 @@ int main() {
   int x = nondet_int();
   bool res_ref = pow2_ref(x);
   bool res_bit = pow2_bit(x);
-  CPROVER_assert(res_ref == res_bit,
+  __CPROVER_assert(res_ref == res_bit,
                  "Err: pow2_bit did not return the same value as pow2_ref");
 }

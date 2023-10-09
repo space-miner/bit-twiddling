@@ -21,6 +21,6 @@ int main() {
   int word = nondet_int();
   int res_ref = set_or_clear_ref(cond, mask, word);
   int res_bit = set_or_clear_bit(cond, mask, word);
-  CPROVER_assert(res_ref == res_bit, "Err: set_or_clear_bit did not return the "
+  __CPROVER_assert(res_ref == res_bit, "Err: set_or_clear_bit did not return the "
                                      "same value as set_or_clear_ref");
 }
