@@ -2,7 +2,7 @@
 - [x] Detect if two integers have opposite signs
 - [x] Compute the integer absolute value (abs) without branching
 - [x] Compute the minimum (min) or maximum (max) of two integers without branching
-- [ ] Determining if an integer is a power of 2
+- [x] Determining if an integer is a power of 2
 - [ ] Sign extending
     - [ ] Sign extending from a constant bit-width
     - [ ] Sign extending from a variable bit-width
