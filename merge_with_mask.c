@@ -22,7 +22,7 @@ int main() {
   __CPROVER_assume(mask == 0 || mask == 1);
   unsigned int res_ref = merge_with_mask_ref(x, y, mask);
   unsigned int res_bit = merge_with_mask_bit(x, y, mask);
-  __CPROVER_assert(merge_with_mask_ref == merge_with_mask_bit,
+  __CPROVER_assert(res_ref == res_bit,
                    "Err: merge_with_mask_bit did not return the same value as "
                    "merge_with_mask_ref");
 }
