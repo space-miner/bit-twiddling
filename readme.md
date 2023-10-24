@@ -8,7 +8,7 @@
     - [ ] Sign extending from a variable bit-width
     - [ ] Sign extending from a variable bit-width in 3 operations
 - [x] Conditionally set or clear bits without branching
-- [ ] Conditionally negate a value without branching
+- [x] Conditionally negate a value without branching
 - [x] Merge bits from two values according to a mask
 - [ ] Counting bits set
     - [ ] Counting bits set, naive way
