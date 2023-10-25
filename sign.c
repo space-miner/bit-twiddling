@@ -22,5 +22,6 @@ int main() {
   bool res_ref = sign_ref(x);
   bool res_bit = sign_bit(x);
   __CPROVER_assert(res_ref == res_bit,
-                   "Err: sign_bit did not return the same value as sign_ref");
+                   "reference implementation sign_ref returned the same value "
+                   "as the bit-twiddling version sign_bit");
 }

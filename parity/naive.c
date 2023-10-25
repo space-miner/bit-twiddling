@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <stdbool.h>
 
 unsigned int nondet_uint();
@@ -17,7 +18,7 @@ bool naive_parity(unsigned int x) {
     parity = !parity;
     x = x & (x - 1);
   }
-  return parity
+  return parity;
 }
 
 int main() {
@@ -26,6 +27,6 @@ int main() {
   unsigned int res_ref = parity_ref(x);
   unsigned int res_bit = naive_parity(x);
   __CPROVER_assert(res_ref == res_bit,
-                   "Err: naive_parity did not return the same value as "
-                   "parity_ref");
+                   "reference implementation parity_ref produced the same "
+                   "value as the bit-twiddling version naive_parity");
 }

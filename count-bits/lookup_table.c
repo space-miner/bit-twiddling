@@ -36,7 +36,8 @@ int main() {
   __CPROVER_assume(x >= 0 && x <= UINT_MAX);
   unsigned int res_ref = count_bits_ref(x);
   unsigned int res_bit = lookup_table_count_bits(x);
-  __CPROVER_assert(res_ref == res_bit,
-                   "Err: lookup_table_count_bits did not return the same value "
-                   "as count_bits_ref");
+  __CPROVER_assert(
+      res_ref == res_bit,
+      "reference implementation count_bits_ref returned the same value as the "
+      "bit-twiddling version lookup_table_count_bits");
 }

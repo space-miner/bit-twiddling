@@ -25,6 +25,6 @@ int main() {
   unsigned int res_ref = count_bits_ref(x);
   unsigned int res_bit = naive_count_bits(x);
   __CPROVER_assert(res_ref == res_bit,
-                   "Err: naive_count_bits did not return the same value as "
-                   "count_bits_ref");
+                   "reference implementation count_bits_ref returned the same "
+                   "value as the bit-twiddling version naive_count_bits");
 }

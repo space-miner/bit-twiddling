@@ -22,7 +22,8 @@ int main() {
   __CPROVER_assume(mask == 0 || mask == 1);
   unsigned int res_ref = merge_with_mask_ref(x, y, mask);
   unsigned int res_bit = merge_with_mask_bit(x, y, mask);
-  __CPROVER_assert(res_ref == res_bit,
-                   "Err: merge_with_mask_bit did not return the same value as "
-                   "merge_with_mask_ref");
+  __CPROVER_assert(
+      res_ref == res_bit,
+      "reference implementation merge_with_mask_ref returned the same value as "
+      "the bit-twiddling version merge_with_mask_bit");
 }

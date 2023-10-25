@@ -32,7 +32,9 @@ int main() {
   int maximum_ref = max_ref(x, y);
   int maximum_bit = max_bit(x, y);
   __CPROVER_assert(minimum_ref == minimum_bit,
-                   "Err: min_bit did not return the same value as min_ref");
+                   "reference implementation min_ref returned the same value "
+                   "as the bit-twiddling version min_bit");
   __CPROVER_assert(maximum_ref == maximum_bit,
-                   "Err: max_bit did not return the same value as max_ref");
+                   "reference implementation max_ref returned the same value "
+                   "as the bit-twiddling version max_bit");
 }

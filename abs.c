@@ -14,5 +14,6 @@ int main() {
   int res_ref = abs_ref(x);
   int res_bit = abs_bit(x);
   __CPROVER_assert(res_ref == res_bit,
-                   "Err: abs_bit did not return the same value as abs_ref");
+                   "reference implementation abs_ref returned the same value "
+                   "as the bit-twiddling version abs_bit");
 }

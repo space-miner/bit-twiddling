@@ -27,6 +27,6 @@ int main() {
   unsigned int res_ref = count_bits_ref(x);
   unsigned int res_bit = brain_kerninghan(x);
   __CPROVER_assert(res_ref == res_bit,
-                   "Err: brain_kerninghan did not return the same value as "
-                   "count_bits_ref");
+                   "reference implementation count_bits_ref returned the same "
+                   "value as the bit-twiddling version brian_kerningham_bit");
 }

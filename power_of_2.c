@@ -26,5 +26,6 @@ int main() {
   bool res_ref = power_of_2_ref(x);
   bool res_bit = power_of_2_bit(x);
   __CPROVER_assert(res_ref == res_bit,
-                   "Err: pow2_bit did not return the same value as pow2_ref");
+                   "reference implementation power_of_2_ref returned the same "
+                   "value as the bit-twiddling version power_of_2_bit");
 }

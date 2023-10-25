@@ -20,6 +20,6 @@ int main() {
   unsigned int res_bit = conditional_negate_bit(fNegate, x);
   __CPROVER_assert(
       res_ref == res_bit,
-      "Err: conditional_negate_bit did not return the same value as "
-      "conditional_negate_ref");
+      "reference implementation conditional_negate_ref returned the same value "
+      "as the bit-twiddling version conditional_negate_bit");
 }

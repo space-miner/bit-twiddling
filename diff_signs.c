@@ -22,7 +22,7 @@ int main() {
   int y = nondet_int();
   bool res_ref = diff_signs_ref(x, y);
   bool res_bit = diff_signs_bit(x, y);
-  __CPROVER_assert(
-      res_ref == res_bit,
-      "Err: diff_signs_bit did not return the same value as diff_signs_ref");
+  __CPROVER_assert(res_ref == res_bit,
+                   "reference implementation diff_signs_ref returned the same "
+                   "value as the bit-twiddling version diff_signs_bit");
 }
