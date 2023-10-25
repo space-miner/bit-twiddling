@@ -25,8 +25,8 @@
     - [ ] Compute parity of word with a multiply
     - [ ] Compute parity in parallel
 - [ ] Swapping Values
-    - [ ] Swapping values with subtraction and addition
-    - [ ] Swapping values with XOR
+    - [x] Swapping values with subtraction and addition
+    - [x] Swapping values with XOR
     - [ ] Swapping individual bits with XOR
 - [ ] Reversing bit sequences
     - [ ] Reverse bits the obvious way
