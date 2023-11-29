@@ -1,3 +1,14 @@
+# bit-twiddling
+sean anderson's ["bit-twiddling hacks"](https://graphics.stanford.edu/~seander/bithacks.html) contains a collection of clever bit manipulation tricks used to implement standard operations. the website claims that in 2005 that [randy bryant](https://www.cs.cmu.edu/~bryant/) had verified them using his own bit-blasting verifier based on BDDs (an ancestor of the current [uclid5](https://github.com/uclid-org/uclid) verification tool).
+
+
+# cbmc
+[cbmc](https://www.cprover.org/cbmc/) is a verifier for c programs based on bounded model checking (hence the name). it symbolically simulates programs, using bounded unrollings of loops and bounded recursion, converting c code into a low-level bit representation using bit-blasting, and ends with calls to a sat solver to check properties (typically specified as assertions) hold by showing that boolean formula encodings it's negation is unsatisfiable.
+
+![](https://img.imgdd.com/f210f3.5ff18684-30e4-4834-bee2-07e8051b55ff.png)
+
+### verification progress
+most of these bit hacks have been verified by using a ["reference implementation"](https://ts00ey.bearblog.dev/verifiying-abs/) and asserting that the two implementations are the same.
 - [x] Compute the sign of an integer
 - [x] Detect if two integers have opposite signs
 - [x] Compute the integer absolute value (abs) without branching
